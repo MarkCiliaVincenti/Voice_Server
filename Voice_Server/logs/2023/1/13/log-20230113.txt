@@ -1,0 +1,34 @@
+2023-01-13 18:13:06.108 +03:00 [Debug] Initializing Razor view compiler with no compiled views.
+2023-01-13 18:13:06.158 +03:00 [Debug] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-01-13 18:13:06.217 +03:00 [Information] User profile is available. Using '"C:\Users\mehmet.benli\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-13 18:13:06.311 +03:00 [Debug] Registered SignalR Protocol: "json", implemented by "Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol".
+2023-01-13 18:13:06.343 +03:00 [Verbose] '"MessagesHub"' hub method '"SendMessage"' is bound.
+2023-01-13 18:13:06.350 +03:00 [Information] Starting app {}
+2023-01-13 18:13:06.351 +03:00 [Debug] Hosting starting
+2023-01-13 18:13:06.354 +03:00 [Debug] Reading data from file '"C:\Users\mehmet.benli\AppData\Local\ASP.NET\DataProtection-Keys\key-87cf8d93-f96a-451a-9cbf-2608df1bfac0.xml"'.
+2023-01-13 18:13:06.366 +03:00 [Debug] Reading data from file '"C:\Users\mehmet.benli\AppData\Local\ASP.NET\DataProtection-Keys\key-91be9968-7b36-4b3a-9bde-52d41f7c3502.xml"'.
+2023-01-13 18:13:06.369 +03:00 [Debug] Found key {87cf8d93-f96a-451a-9cbf-2608df1bfac0}.
+2023-01-13 18:13:06.372 +03:00 [Debug] Found key {91be9968-7b36-4b3a-9bde-52d41f7c3502}.
+2023-01-13 18:13:06.376 +03:00 [Debug] Considering key {87cf8d93-f96a-451a-9cbf-2608df1bfac0} with expiration date 2023-04-11 12:42:23Z as default key.
+2023-01-13 18:13:06.379 +03:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2023-01-13 18:13:06.379 +03:00 [Debug] Decrypting secret element using Windows DPAPI.
+2023-01-13 18:13:06.381 +03:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2023-01-13 18:13:06.382 +03:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2023-01-13 18:13:06.383 +03:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2023-01-13 18:13:06.385 +03:00 [Debug] Using key {87cf8d93-f96a-451a-9cbf-2608df1bfac0} as the default key.
+2023-01-13 18:13:06.385 +03:00 [Debug] Key ring with default key {87cf8d93-f96a-451a-9cbf-2608df1bfac0} was loaded during application startup.
+2023-01-13 18:13:06.436 +03:00 [Debug] Loaded hosting startup assembly "Voice_Server"
+2023-01-13 18:13:06.437 +03:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-01-13 18:13:06.437 +03:00 [Information] Hosting environment: "Development"
+2023-01-13 18:13:06.437 +03:00 [Information] Content root path: "C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server"
+2023-01-13 18:13:06.437 +03:00 [Verbose] Starting connection heartbeat.
+2023-01-13 18:13:06.439 +03:00 [Debug] Hosting started
+2023-01-13 18:13:06.458 +03:00 [Information] Request starting HTTP/2 GET https://localhost:44346/swagger/index.html - -
+2023-01-13 18:13:06.459 +03:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2023-01-13 18:13:06.459 +03:00 [Verbose] All hosts are allowed.
+2023-01-13 18:13:06.548 +03:00 [Debug] Connection ID ""18086456135195295747"" disconnecting.
+2023-01-13 18:13:06.548 +03:00 [Information] Request finished HTTP/2 GET https://localhost:44346/swagger/index.html - - - 200 - text/html;charset=utf-8 91.8129ms
+2023-01-13 18:13:06.770 +03:00 [Information] Request starting HTTP/2 GET https://localhost:44346/swagger/v1/swagger.json - -
+2023-01-13 18:13:06.770 +03:00 [Verbose] All hosts are allowed.
+2023-01-13 18:13:06.826 +03:00 [Debug] Connection ID ""18302628887244308529"" disconnecting.
+2023-01-13 18:13:06.826 +03:00 [Information] Request finished HTTP/2 GET https://localhost:44346/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 55.8650ms

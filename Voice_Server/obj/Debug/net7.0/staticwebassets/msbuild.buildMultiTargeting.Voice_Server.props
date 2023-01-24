@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Voice_Server.props" />
+</Project>

@@ -1,0 +1,15 @@
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Shared.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Shared.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll

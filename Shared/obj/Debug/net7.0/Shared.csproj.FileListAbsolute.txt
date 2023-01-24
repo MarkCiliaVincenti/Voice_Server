@@ -1,0 +1,12 @@
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Shared.deps.json
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Shared.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Shared.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.csproj.AssemblyReference.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.AssemblyInfoInputs.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.AssemblyInfo.cs
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\refint\Shared.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\ref\Shared.dll
