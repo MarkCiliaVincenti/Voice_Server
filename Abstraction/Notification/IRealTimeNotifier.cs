@@ -1,6 +1,6 @@
 using Domain.Notifications;
 
-namespace Abstraction;
+namespace Abstraction.Notification;
 
 public interface IRealTimeNotifier
 {

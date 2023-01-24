@@ -1,4 +1,4 @@
-using Abstraction;
+using Abstraction.Notification;
 using Domain.Notifications;
 using Microsoft.AspNetCore.Mvc;
 

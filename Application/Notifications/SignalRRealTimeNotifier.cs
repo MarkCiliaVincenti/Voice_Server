@@ -1,4 +1,4 @@
-using Abstraction;
+using Abstraction.Notification;
 using Application.Hubs;
 using Domain;
 using Domain.Notifications;

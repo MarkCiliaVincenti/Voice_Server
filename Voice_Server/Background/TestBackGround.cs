@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace Voice_BackGround.Socket
+namespace Voice_Server.Background
 {
     public class Socket_Test_Background : BackgroundService
     {
