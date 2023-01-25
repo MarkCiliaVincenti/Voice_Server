@@ -1,4 +1,4 @@
-namespace Storage;
+﻿namespace Storage.BlobStoring;
 
 public interface IBlobProvider
 {

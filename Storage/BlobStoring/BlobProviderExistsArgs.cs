@@ -1,17 +1,19 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using JetBrains.Annotations;
 
-namespace Storage;
+namespace Storage.BlobStoring;
 
 public class BlobProviderExistsArgs : BlobProviderArgs
 {
     public BlobProviderExistsArgs(
         [NotNull] string containerName,
+        [NotNull] BlobContainerConfiguration configuration,
         [NotNull] string blobName,
         CancellationToken cancellationToken = default)
-        : base(
-            containerName,
-            blobName,
-            cancellationToken)
+    : base(
+        containerName,
+        configuration,
+        blobName,
+        cancellationToken)
     {
     }
 }

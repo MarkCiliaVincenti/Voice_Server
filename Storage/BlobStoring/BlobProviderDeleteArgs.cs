@@ -1,15 +1,17 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using JetBrains.Annotations;
 
-namespace Storage;
+namespace Storage.BlobStoring;
 
-public class BlobProviderGetArgs : BlobProviderArgs
+public class BlobProviderDeleteArgs : BlobProviderArgs
 {
-    public BlobProviderGetArgs(
+    public BlobProviderDeleteArgs(
         [NotNull] string containerName,
+        [NotNull] BlobContainerConfiguration configuration,
         [NotNull] string blobName,
         CancellationToken cancellationToken = default)
         : base(
             containerName,
+            configuration,
             blobName,
             cancellationToken)
     {

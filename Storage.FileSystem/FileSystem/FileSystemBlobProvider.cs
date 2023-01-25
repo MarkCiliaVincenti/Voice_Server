@@ -1,7 +1,8 @@
 ﻿using Core.IO;
 using Polly;
+using Storage.BlobStoring;
 
-namespace Storage.FileSystem;
+namespace Storage.FileSystem.FileSystem;
 
 public class FileSystemBlobProvider : BlobProviderBase
 {
@@ -18,7 +19,7 @@ public class FileSystemBlobProvider : BlobProviderBase
 
         if (!args.OverrideExisting && await ExistsAsync(filePath))
         {
-            throw new Exception(
+            throw new BlobAlreadyExistsException(
                 $"Saving BLOB '{args.BlobName}' does already exists in the container '{args.ContainerName}'! Set {nameof(args.OverrideExisting)} if it should be overwritten.");
         }
 
