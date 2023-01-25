@@ -13,13 +13,26 @@
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
           "Microsoft.AspNetCore.SignalR.Client": "7.0.2",
           "Microsoft.AspNetCore.SignalR.Client.Core": "7.0.2",
+          "NSubstitute": "4.4.0",
           "Serilog": "2.12.1-dev-01635",
           "Serilog.AspNetCore": "6.1.1-dev-00293",
           "Serilog.Sinks.Seq": "5.2.3-dev-00260",
+          "Storage.FileSystem": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
           "Voice_Server.dll": {}
+        }
+      },
+      "Castle.Core/5.0.0": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
         }
       },
       "JetBrains.Annotations/2022.3.1": {
@@ -294,6 +307,17 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "NSubstitute/4.4.0": {
+        "dependencies": {
+          "Castle.Core": "5.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/NSubstitute.dll": {
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.4.0.0"
+          }
         }
       },
       "Polly/7.2.3": {
@@ -605,6 +629,7 @@
           "System.Threading": "4.3.0"
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {},
       "System.Diagnostics.Tools/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1180,6 +1205,14 @@
         "runtime": {
           "Storage.dll": {}
         }
+      },
+      "Storage.FileSystem/1.0.0": {
+        "dependencies": {
+          "Storage": "1.0.0"
+        },
+        "runtime": {
+          "Storage.FileSystem.dll": {}
+        }
       }
     }
   },
@@ -1188,6 +1221,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Castle.Core/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-edc8jjyXqzzy8jFdhs36FZdwmlDDTgqPb2Zy1Q5F/f2uAc88bu/VS/0Tpvgupmpl9zJOvOo5ZizVANb0ltN1NQ==",
+      "path": "castle.core/5.0.0",
+      "hashPath": "castle.core.5.0.0.nupkg.sha512"
     },
     "JetBrains.Annotations/2022.3.1": {
       "type": "package",
@@ -1426,6 +1466,13 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "NSubstitute/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aArWp0M9n/3IZHCNSb3QIHy0tkPLSft8l3KFeUa54GbznKiv0FE687TBfPhZbXf0/zGtc4EsHLEUqEEf0Bf4HQ==",
+      "path": "nsubstitute/4.4.0",
+      "hashPath": "nsubstitute.4.4.0.nupkg.sha512"
     },
     "Polly/7.2.3": {
       "type": "package",
@@ -1713,6 +1760,13 @@
       "sha512": "sha512-tD6kosZnTAGdrEa0tZSuFyunMbt/5KYDnHdndJYGqZoNy00XVXyACd5d6KnE1YgYv3ne2CjtAfNXo/fwEhnKUA==",
       "path": "system.diagnostics.diagnosticsource/4.3.0",
       "hashPath": "system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
     },
     "System.Diagnostics.Tools/4.3.0": {
       "type": "package",
@@ -2095,6 +2149,11 @@
       "sha512": ""
     },
     "Storage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Storage.FileSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
