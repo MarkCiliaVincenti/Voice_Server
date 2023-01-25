@@ -13,3 +13,11 @@ C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Abstraction.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Core.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Domain.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Storage.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Abstraction.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Core.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Domain.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Infrastructure\bin\Debug\net7.0\Storage.pdb

@@ -17,3 +17,7 @@ C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\obj\Debug\net7.0\Ap
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\obj\Debug\net7.0\refint\Application.dll
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\obj\Debug\net7.0\Application.pdb
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\obj\Debug\net7.0\ref\Application.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\bin\Debug\net7.0\Core.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\bin\Debug\net7.0\Storage.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\bin\Debug\net7.0\Core.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Application\bin\Debug\net7.0\Storage.pdb

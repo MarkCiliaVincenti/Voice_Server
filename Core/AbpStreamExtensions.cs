@@ -4,28 +4,24 @@ public static class AbpStreamExtensions
 {
     public static byte[] GetAllBytes(this Stream stream)
     {
-        using (var memoryStream = new MemoryStream())
+        using var memoryStream = new MemoryStream();
+        if (stream.CanSeek)
         {
-            if (stream.CanSeek)
-            {
-                stream.Position = 0;
-            }
-            stream.CopyTo(memoryStream);
-            return memoryStream.ToArray();
+            stream.Position = 0;
         }
+        stream.CopyTo(memoryStream);
+        return memoryStream.ToArray();
     }
 
     public static async Task<byte[]> GetAllBytesAsync(this Stream stream, CancellationToken cancellationToken = default)
     {
-        using (var memoryStream = new MemoryStream())
+        using var memoryStream = new MemoryStream();
+        if (stream.CanSeek)
         {
-            if (stream.CanSeek)
-            {
-                stream.Position = 0;
-            }
-            await stream.CopyToAsync(memoryStream, cancellationToken);
-            return memoryStream.ToArray();
+            stream.Position = 0;
         }
+        await stream.CopyToAsync(memoryStream, cancellationToken);
+        return memoryStream.ToArray();
     }
 
     public static Task CopyToAsync(this Stream stream, Stream destination, CancellationToken cancellationToken)

@@ -22,22 +22,20 @@ public class BlobNormalizeNamingService : IBlobNormalizeNamingService
             return new BlobNormalizeNaming(containerName, blobName);
         }
 
-        using (var scope = ServiceProvider.CreateScope())
+        using var scope = ServiceProvider.CreateScope();
+        foreach (var normalizerType in configuration.NamingNormalizers)
         {
-            foreach (var normalizerType in configuration.NamingNormalizers)
-            {
-                var normalizer = scope.ServiceProvider
-                    .GetRequiredService(normalizerType)
-                    .As<IBlobNamingNormalizer>();
+            var normalizer = scope.ServiceProvider
+                .GetRequiredService(normalizerType)
+                .As<IBlobNamingNormalizer>();
 
-                containerName = containerName.IsNullOrWhiteSpace()
-                    ? containerName
-                    : normalizer.NormalizeContainerName(containerName);
-                blobName = blobName.IsNullOrWhiteSpace() ? blobName : normalizer.NormalizeBlobName(blobName);
-            }
-
-            return new BlobNormalizeNaming(containerName, blobName);
+            containerName = containerName.IsNullOrWhiteSpace()
+                ? containerName
+                : normalizer.NormalizeContainerName(containerName);
+            blobName = blobName.IsNullOrWhiteSpace() ? blobName : normalizer.NormalizeBlobName(blobName);
         }
+
+        return new BlobNormalizeNaming(containerName, blobName);
     }
 
     public string NormalizeContainerName(BlobContainerConfiguration configuration, string containerName)

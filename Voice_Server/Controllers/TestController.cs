@@ -1,6 +1,11 @@
+using System.Text;
 using Abstraction.Notification;
+using Abstraction.Storage;
+using Core;
 using Domain.Notifications;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Containers;
+using Storage.BlobStoring;
 
 namespace Voice_Server.Controllers;
 
@@ -9,15 +14,25 @@ namespace Voice_Server.Controllers;
 public class TestController : ControllerBase
 {
     private readonly IRealTimeNotifier _realTimeNotifier;
+    private readonly IBlobContainer<ITestContainer> _blobContainer;
 
-    public TestController(IRealTimeNotifier realTimeNotifier)
+    public TestController(IRealTimeNotifier realTimeNotifier, IBlobContainer<ITestContainer> blobContainer)
     {
         _realTimeNotifier = realTimeNotifier;
+        _blobContainer = blobContainer;
     }
 
     [HttpGet]
-    public ActionResult<string> Get()
+    public async Task<ActionResult<string>> Get()
     {
+        //create a string and convert to byte 
+        var test = "test";
+        var bytes = test.GetBytes();
+        
+        
+
+        await _blobContainer.SaveAsync("test.txt", bytes);
+
         _realTimeNotifier.SendNotificationAsync(new[]
         {
             new UserNotification

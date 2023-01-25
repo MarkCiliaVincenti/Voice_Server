@@ -1,4 +1,6 @@
-﻿namespace Storage.BlobStoring;
+﻿using Abstraction.Storage;
+
+namespace Storage.BlobStoring;
 
 public class BlobContainer<TContainer> : IBlobContainer<TContainer>
     where TContainer : class
@@ -72,9 +74,6 @@ public class BlobContainer : IBlobContainer
     protected BlobContainerConfiguration Configuration { get; }
 
     protected IBlobProvider Provider { get; }
-
-    protected CancellationToken CancellationTokenProvider { get; }
-
     protected IServiceProvider ServiceProvider { get; }
 
     protected IBlobNormalizeNamingService BlobNormalizeNamingService { get; }
@@ -83,14 +82,12 @@ public class BlobContainer : IBlobContainer
         string containerName,
         BlobContainerConfiguration configuration,
         IBlobProvider provider,
-        CancellationToken cancellationTokenProvider,
         IBlobNormalizeNamingService blobNormalizeNamingService,
         IServiceProvider serviceProvider)
     {
         ContainerName = containerName;
         Configuration = configuration;
         Provider = provider;
-        CancellationTokenProvider = cancellationTokenProvider;
         BlobNormalizeNamingService = blobNormalizeNamingService;
         ServiceProvider = serviceProvider;
     }

@@ -13,3 +13,10 @@ C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\obj\Debug\net7.0\Ab
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\obj\Debug\net7.0\refint\Abstraction.dll
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\obj\Debug\net7.0\Abstraction.pdb
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\obj\Debug\net7.0\ref\Abstraction.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\System.IO.Pipelines.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Abstraction\bin\Debug\net7.0\Microsoft.Extensions.Features.dll

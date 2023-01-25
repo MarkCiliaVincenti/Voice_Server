@@ -18,4 +18,8 @@
         <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.3-dev-00260" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Storage\Storage.csproj" />
+    </ItemGroup>
+
 </Project>

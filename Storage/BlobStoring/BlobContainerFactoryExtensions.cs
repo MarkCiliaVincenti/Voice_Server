@@ -1,4 +1,6 @@
-﻿namespace Storage.BlobStoring;
+﻿using Abstraction.Storage;
+
+namespace Storage.BlobStoring;
 
 public static class BlobContainerFactoryExtensions
 {

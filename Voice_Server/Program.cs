@@ -1,8 +1,10 @@
 using Abstraction.Notification;
+using Abstraction.Storage;
 using Application.Hubs;
 using Application.Notifications;
 using Infrastructure.Extensions;
 using Serilog;
+using Storage.BlobStoring;
 using static System.DateTime;
 
 namespace Voice_Server;
@@ -19,6 +21,12 @@ public partial class Program
         builder.AddCustomSerilog();
         //add cors
 
+        //add service IBlobContainer<> and BlobContainer<> for dependency injection
+        builder.Services.AddTransient(typeof(IBlobContainer<>),typeof(BlobContainer<>));
+        builder.Services.AddTransient(typeof(IBlobContainerConfigurationProvider),typeof(DefaultBlobContainerConfigurationProvider));
+        builder.Services.AddTransient(typeof(IBlobProviderSelector),typeof(DefaultBlobProviderSelector));
+        builder.Services.AddTransient(typeof(IBlobNormalizeNamingService),typeof(BlobNormalizeNamingService));
+        builder.Services.AddTransient<IBlobContainerFactory,BlobContainerFactory>();
 
         builder.Services.AddTransient<IRealTimeNotifier, SignalRRealTimeNotifier>();
 

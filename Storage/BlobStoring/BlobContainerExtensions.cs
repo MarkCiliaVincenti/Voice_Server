@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using Abstraction.Storage;
+using Core;
 
 namespace Storage.BlobStoring;
 
@@ -12,15 +13,13 @@ public static class BlobContainerExtensions
         CancellationToken cancellationToken = default
     )
     {
-        using (var memoryStream = new MemoryStream(bytes))
-        {
-            await container.SaveAsync(
-                name,
-                memoryStream,
-                overrideExisting,
-                cancellationToken
-            );
-        }
+        using var memoryStream = new MemoryStream(bytes);
+        await container.SaveAsync(
+            name,
+            memoryStream,
+            overrideExisting,
+            cancellationToken
+        );
     }
 
     public static async Task<byte[]> GetAllBytesAsync(
@@ -28,10 +27,8 @@ public static class BlobContainerExtensions
         string name,
         CancellationToken cancellationToken = default)
     {
-        using (var stream = await container.GetAsync(name, cancellationToken))
-        {
-            return await stream.GetAllBytesAsync(cancellationToken);
-        }
+        await using var stream = await container.GetAsync(name, cancellationToken);
+        return await stream.GetAllBytesAsync(cancellationToken);
     }
 
     public static async Task<byte[]> GetAllBytesOrNullAsync(
@@ -45,7 +42,7 @@ public static class BlobContainerExtensions
             return null;
         }
 
-        using (stream)
+        await using (stream)
         {
             return await stream.GetAllBytesAsync(cancellationToken);
         }

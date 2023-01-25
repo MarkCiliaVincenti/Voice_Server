@@ -10,3 +10,12 @@ C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\refint\Shared.dll
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.pdb
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\ref\Shared.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Abstraction.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Core.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Domain.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Storage.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Storage.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Abstraction.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Core.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\bin\Debug\net7.0\Domain.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Shared\obj\Debug\net7.0\Shared.csproj.CopyComplete

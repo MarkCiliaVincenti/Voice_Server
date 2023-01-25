@@ -32,20 +32,16 @@ public static class FileHelper
 
     public static async Task<string> ReadAllTextAsync(string path)
     {
-        using (var reader = File.OpenText(path))
-        {
-            return await reader.ReadToEndAsync();
-        }
+        using var reader = File.OpenText(path);
+        return await reader.ReadToEndAsync();
     }
 
     public static async Task<byte[]> ReadAllBytesAsync(string path)
     {
-        using (var stream = File.Open(path, FileMode.Open))
-        {
-            var result = new byte[stream.Length];
-            await stream.ReadAsync(result, 0, (int)stream.Length);
-            return result;
-        }
+        await using var stream = File.Open(path, FileMode.Open);
+        var result = new byte[stream.Length];
+        await stream.ReadAsync(result, 0, (int)stream.Length);
+        return result;
     }
 
     public static async Task<string[]> ReadAllLinesAsync(string path,
@@ -63,13 +59,13 @@ public static class FileHelper
 
         var lines = new List<string>();
 
-        using (var stream = new FileStream(
-                   path,
-                   fileMode,
-                   fileAccess,
-                   fileShare,
-                   bufferSize,
-                   fileOptions))
+        await using (var stream = new FileStream(
+                         path,
+                         fileMode,
+                         fileAccess,
+                         fileShare,
+                         bufferSize,
+                         fileOptions))
         {
             using (var reader = new StreamReader(stream, encoding))
             {

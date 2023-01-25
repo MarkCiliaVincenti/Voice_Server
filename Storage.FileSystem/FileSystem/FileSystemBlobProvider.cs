@@ -33,15 +33,13 @@ public class FileSystemBlobProvider : BlobProviderBase
             .WaitAndRetryAsync(2, retryCount => TimeSpan.FromSeconds(retryCount))
             .ExecuteAsync(async () =>
             {
-                using (var fileStream = File.Open(filePath, fileMode, FileAccess.Write))
-                {
-                    await args.BlobStream.CopyToAsync(
-                        fileStream,
-                        args.CancellationToken
-                    );
+                await using var fileStream = File.Open(filePath, fileMode, FileAccess.Write);
+                await args.BlobStream.CopyToAsync(
+                    fileStream,
+                    args.CancellationToken
+                );
 
-                    await fileStream.FlushAsync();
-                }
+                await fileStream.FlushAsync();
             });
     }
 
@@ -70,10 +68,8 @@ public class FileSystemBlobProvider : BlobProviderBase
             .WaitAndRetryAsync(2, retryCount => TimeSpan.FromSeconds(retryCount))
             .ExecuteAsync(async () =>
             {
-                using (var fileStream = File.OpenRead(filePath))
-                {
-                    return await TryCopyToMemoryStreamAsync(fileStream, args.CancellationToken);
-                }
+                await using var fileStream = File.OpenRead(filePath);
+                return await TryCopyToMemoryStreamAsync(fileStream, args.CancellationToken);
             });
     }
 
