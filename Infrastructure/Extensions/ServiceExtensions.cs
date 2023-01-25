@@ -7,11 +7,16 @@ namespace Infrastructure.Extensions;
 public static class ServiceExtensions
 {
     public static void AddSignalr(this WebApplicationBuilder services)
-        => services.Services.AddSignalR(opt =>
-        {
-            opt.HandshakeTimeout = TimeSpan.FromMinutes(5);
-        });
+        => services.Services.AddSignalR(opt => { opt.HandshakeTimeout = TimeSpan.FromMinutes(5); });
 
     public static void AddCustomSerilog(this WebApplicationBuilder builder)
         => builder.Host.CreateAndUseLogger(builder.Configuration);
+
+    public static IServiceCollection AddSingletons<TService>(
+        this IServiceCollection services,
+        TService implementationInstance)
+        where TService : class
+    {
+        return services.AddSingleton(typeof(TService), implementationInstance);
+    }
 }

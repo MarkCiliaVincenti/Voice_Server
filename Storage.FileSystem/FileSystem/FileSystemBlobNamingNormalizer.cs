@@ -1,16 +1,9 @@
-﻿using System.Globalization;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using Storage.BlobStoring;
+﻿using System.Text.RegularExpressions;
 
-namespace Storage.FileSystem.FileSystem;
+namespace Volo.Abp.BlobStoring.FileSystem;
 
 public class FileSystemBlobNamingNormalizer : IBlobNamingNormalizer
 {
-    public FileSystemBlobNamingNormalizer()
-    {
-    }
-
     public virtual string NormalizeContainerName(string containerName)
     {
         return Normalize(containerName);
@@ -23,7 +16,10 @@ public class FileSystemBlobNamingNormalizer : IBlobNamingNormalizer
 
     protected virtual string Normalize(string fileName)
     {
+        // A filename cannot contain any of the following characters: \ / : * ? " < > |
+        // In order to support the directory included in the blob name, remove / and \
         fileName = Regex.Replace(fileName, "[:\\*\\?\"<>\\|]", string.Empty);
+
         return fileName;
     }
 }

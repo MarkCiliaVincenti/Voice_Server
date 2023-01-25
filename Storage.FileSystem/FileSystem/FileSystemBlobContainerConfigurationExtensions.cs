@@ -15,7 +15,6 @@ public static class FileSystemBlobContainerConfigurationExtensions
         Action<FileSystemBlobProviderConfiguration> fileSystemConfigureAction)
     {
         containerConfiguration.ProviderType = typeof(FileSystemBlobProvider);
-        containerConfiguration.NamingNormalizers.TryAdd<FileSystemBlobNamingNormalizer>();
 
         fileSystemConfigureAction(new FileSystemBlobProviderConfiguration(containerConfiguration));
 

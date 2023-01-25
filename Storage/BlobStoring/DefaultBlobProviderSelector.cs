@@ -21,7 +21,6 @@ public class DefaultBlobProviderSelector : IBlobProviderSelector
     public virtual IBlobProvider Get([NotNull] string containerName)
     {
         Check.NotNull(containerName, nameof(containerName));
-
         var configuration = ConfigurationProvider.Get(containerName);
 
         if (!BlobProviders.Any())

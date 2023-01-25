@@ -69,3 +69,7 @@ C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\C
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Storage.dll
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Core.pdb
 C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Storage.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Storage.FileSystem.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Storage.FileSystem.pdb
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\mehmet.benli\RiderProjects\Voice_Server\Voice_Server\bin\Debug\net7.0\NSubstitute.dll

@@ -1,4 +1,4 @@
-﻿namespace Storage.BlobStoring;
+﻿namespace Volo.Abp.BlobStoring;
 
 public interface IBlobNamingNormalizer
 {
