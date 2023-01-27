@@ -1,5 +1,5 @@
 ﻿using Core;
-using JetBrains.Annotations;
+using Core.DynamicProxy;
 
 namespace Storage.BlobStoring;
 
@@ -17,8 +17,7 @@ public class DefaultBlobProviderSelector : IBlobProviderSelector
         BlobProviders = blobProviders;
     }
 
-    [NotNull]
-    public virtual IBlobProvider Get([NotNull] string containerName)
+    public virtual IBlobProvider Get(string containerName)
     {
         Check.NotNull(containerName, nameof(containerName));
         var configuration = ConfigurationProvider.Get(containerName);

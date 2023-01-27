@@ -1,0 +1,59 @@
+using Core;
+using Core.ExceptionHandling;
+using Core.Threading;
+using Microsoft.Extensions.DependencyInjection;
+using Threading;
+
+namespace Workers.BackgroundWorkers;
+
+/// <summary>
+/// Extends <see cref="BackgroundWorkerBase"/> to add a periodic running Timer.
+/// </summary>
+public abstract class PeriodicBackgroundWorkerBase : BackgroundWorkerBase
+{
+    protected IServiceScopeFactory ServiceScopeFactory { get; }
+    protected EqnTimer Timer { get; }
+
+    protected PeriodicBackgroundWorkerBase(
+        EqnTimer timer,
+        IServiceScopeFactory serviceScopeFactory)
+    {
+        ServiceScopeFactory = serviceScopeFactory;
+        Timer = timer;
+        Timer.Elapsed += Timer_Elapsed;
+    }
+
+    public override async Task StartAsync(CancellationToken cancellationToken = default)
+    {
+        await base.StartAsync(cancellationToken);
+        Timer.Start(cancellationToken);
+    }
+
+    public override async Task StopAsync(CancellationToken cancellationToken = default)
+    {
+        Timer.Stop(cancellationToken);
+        await base.StopAsync(cancellationToken);
+    }
+
+    private void Timer_Elapsed(object sender, System.EventArgs e)
+    {
+        using (var scope = ServiceScopeFactory.CreateScope())
+        {
+            try
+            {
+                DoWork(new PeriodicBackgroundWorkerContext(scope.ServiceProvider));
+            }
+            catch (Exception ex)
+            {
+                var exceptionNotifier = scope.ServiceProvider.GetRequiredService<IExceptionNotifier>();
+                AsyncHelper.RunSync(() => exceptionNotifier.NotifyAsync(new ExceptionNotificationContext(ex)));
+
+            }
+        }
+    }
+
+    /// summary>
+    /// Periodic works should be done by implementing this method.
+    /// </summary>
+    protected abstract void DoWork(PeriodicBackgroundWorkerContext workerContext);
+}

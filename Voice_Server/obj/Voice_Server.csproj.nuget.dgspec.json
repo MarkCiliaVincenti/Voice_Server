@@ -182,6 +182,10 @@
             "JetBrains.Annotations": {
               "target": "Package",
               "version": "[2022.3.1, )"
+            },
+            "Nito.AsyncEx.Context": {
+              "target": "Package",
+              "version": "[5.1.2, )"
             }
           },
           "imports": [
@@ -297,6 +301,9 @@
             "projectReferences": {
               "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Shared\\Shared.csproj": {
                 "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Shared\\Shared.csproj"
+              },
+              "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Storage.FileSystem\\Storage.FileSystem.csproj": {
+                "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Storage.FileSystem\\Storage.FileSystem.csproj"
               }
             }
           }

@@ -6,7 +6,7 @@ public class DisposeAction : IDisposable
 {
     private readonly Action _action;
 
-    public DisposeAction([NotNull] Action action)
+    public DisposeAction(Action action)
     {
         ArgumentNullException.ThrowIfNull(action);
 

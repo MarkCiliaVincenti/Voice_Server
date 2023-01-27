@@ -1,7 +1,7 @@
 using Core;
 using Core.Collections;
 using JetBrains.Annotations;
-using Volo.Abp.BlobStoring;
+
 
 namespace Storage.BlobStoring;
 
@@ -26,7 +26,7 @@ public class BlobContainerConfiguration
 
     public ITypeList<IBlobNamingNormalizer> NamingNormalizers { get; }
 
-    [NotNull] private readonly Dictionary<string, object> _properties;
+    private readonly Dictionary<string, object> _properties;
 
     [CanBeNull] private readonly BlobContainerConfiguration _fallbackConfiguration;
 
@@ -51,8 +51,7 @@ public class BlobContainerConfiguration
                defaultValue;
     }
 
-    [NotNull]
-    public BlobContainerConfiguration SetConfiguration([NotNull] string name, [CanBeNull] object value)
+    public BlobContainerConfiguration SetConfiguration(string name, [CanBeNull] object value)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name);
         ArgumentNullException.ThrowIfNull(value);
@@ -61,8 +60,7 @@ public class BlobContainerConfiguration
         return this;
     }
 
-    [NotNull]
-    public BlobContainerConfiguration ClearConfiguration([NotNull] string name)
+    public BlobContainerConfiguration ClearConfiguration(string name)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name);
 

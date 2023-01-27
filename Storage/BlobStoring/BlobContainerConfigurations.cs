@@ -1,5 +1,4 @@
 ﻿using Core;
-using JetBrains.Annotations;
 
 namespace Storage.BlobStoring;
 
@@ -28,8 +27,8 @@ public class BlobContainerConfigurations
     }
 
     public BlobContainerConfigurations Configure(
-        [NotNull] string name,
-        [NotNull] Action<BlobContainerConfiguration> configureAction)
+        string name,
+        Action<BlobContainerConfiguration> configureAction)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name);
         ArgumentNullException.ThrowIfNull(configureAction);
@@ -60,14 +59,12 @@ public class BlobContainerConfigurations
         return this;
     }
 
-    [NotNull]
     public BlobContainerConfiguration GetConfiguration<TContainer>()
     {
         return GetConfiguration(BlobContainerNameAttribute.GetContainerName<TContainer>());
     }
 
-    [NotNull]
-    public BlobContainerConfiguration GetConfiguration([NotNull] string name)
+    public BlobContainerConfiguration GetConfiguration(string name)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name);
 

@@ -1,20 +1,18 @@
 ﻿using Core;
-using JetBrains.Annotations;
 
 namespace Storage.BlobStoring;
 
 public class BlobProviderSaveArgs : BlobProviderArgs
 {
-    [NotNull]
     public Stream BlobStream { get; }
 
     public bool OverrideExisting { get; }
 
     public BlobProviderSaveArgs(
-        [NotNull] string containerName,
-        [NotNull] BlobContainerConfiguration configuration,
-        [NotNull] string blobName,
-        [NotNull] Stream blobStream,
+        string containerName,
+        BlobContainerConfiguration configuration,
+        string blobName,
+        Stream blobStream,
         bool overrideExisting = false,
         CancellationToken cancellationToken = default)
         : base(

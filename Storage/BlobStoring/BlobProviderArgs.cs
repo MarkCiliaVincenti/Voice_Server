@@ -1,25 +1,21 @@
 ﻿using Core;
-using JetBrains.Annotations;
 
 namespace Storage.BlobStoring;
 
 public abstract class BlobProviderArgs
 {
-    [NotNull]
     public string ContainerName { get; }
 
-    [NotNull]
     public BlobContainerConfiguration Configuration { get; }
 
-    [NotNull]
     public string BlobName { get; }
 
     public CancellationToken CancellationToken { get; }
 
     protected BlobProviderArgs(
-        [NotNull] string containerName,
-        [NotNull] BlobContainerConfiguration configuration,
-        [NotNull] string blobName,
+        string containerName,
+        BlobContainerConfiguration configuration,
+        string blobName,
         CancellationToken cancellationToken = default)
     {
         ContainerName = Check.NotNullOrWhiteSpace(containerName, nameof(containerName));

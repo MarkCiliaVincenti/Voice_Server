@@ -1,6 +1,5 @@
 ﻿using Core;
 using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp.BlobStoring;
 
 namespace Storage.BlobStoring;
 

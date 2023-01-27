@@ -1,13 +1,11 @@
-﻿using JetBrains.Annotations;
-
-namespace Storage.BlobStoring;
+﻿namespace Storage.BlobStoring;
 
 public class BlobProviderDeleteArgs : BlobProviderArgs
 {
     public BlobProviderDeleteArgs(
-        [NotNull] string containerName,
-        [NotNull] BlobContainerConfiguration configuration,
-        [NotNull] string blobName,
+        string containerName,
+        BlobContainerConfiguration configuration,
+        string blobName,
         CancellationToken cancellationToken = default)
         : base(
             containerName,

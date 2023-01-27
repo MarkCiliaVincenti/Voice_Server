@@ -1,14 +1,12 @@
 ﻿using System.Reflection;
-using JetBrains.Annotations;
 
 namespace Storage.BlobStoring;
 
 public class BlobContainerNameAttribute : Attribute
 {
-    [NotNull]
     public string Name { get; }
 
-    public BlobContainerNameAttribute([NotNull] string name)
+    public BlobContainerNameAttribute(string name)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(name);
 

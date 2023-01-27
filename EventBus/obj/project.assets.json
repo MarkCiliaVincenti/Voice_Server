@@ -1,11 +1,325 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "JetBrains.Annotations/2022.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Nito.AsyncEx.Context/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Nito.AsyncEx.Tasks": "5.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Nito.AsyncEx.Context.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Context.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Nito.AsyncEx.Tasks/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Nito.Disposables": "2.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Nito.AsyncEx.Tasks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nito.AsyncEx.Tasks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Nito.Disposables/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.Immutable": "1.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Nito.Disposables.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Nito.Disposables.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Collections.Immutable/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "JetBrains.Annotations": "2022.3.1",
+          "Nito.AsyncEx.Context": "5.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "DistributedLockingAbstrcation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DistributedLockingAbstrcation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DistributedLockingAbstrcation.dll": {}
+        }
+      },
+      "EventBus.Abstraction/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EventBus.Abstraction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventBus.Abstraction.dll": {}
+        }
+      },
+      "ObjectExtension/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ObjectExtension.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ObjectExtension.dll": {}
+        }
+      },
+      "Threading/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Threading.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Threading.dll": {}
+        }
+      },
+      "Uow/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Uow.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Uow.dll": {}
+        }
+      },
+      "Workers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Threading": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Workers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Workers.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "JetBrains.Annotations/2022.3.1": {
+      "sha512": "11nsS3+lFICGkztVs9PP2NRItxf9fF+qD6xEW/T0YGto52zj07wseUeBdMAU1ah9HNVTDZyRC1u4NWdtJScwhw==",
+      "type": "package",
+      "path": "jetbrains.annotations/2022.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "jetbrains.annotations.2022.3.1.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
+    "Nito.AsyncEx.Context/5.1.2": {
+      "sha512": "rMwL7Nj3oNyvFu/jxUzQ/YBobEkM2RQHe+5mpCDRyq6mfD7vCj7Z3rjB6XgpM6Mqcx1CA2xGv0ascU/2Xk8IIg==",
+      "type": "package",
+      "path": "nito.asyncex.context/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/Nito.AsyncEx.Context.dll",
+        "lib/net461/Nito.AsyncEx.Context.xml",
+        "lib/netstandard1.3/Nito.AsyncEx.Context.dll",
+        "lib/netstandard1.3/Nito.AsyncEx.Context.xml",
+        "lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "lib/netstandard2.0/Nito.AsyncEx.Context.xml",
+        "nito.asyncex.context.5.1.2.nupkg.sha512",
+        "nito.asyncex.context.nuspec"
+      ]
+    },
+    "Nito.AsyncEx.Tasks/5.1.2": {
+      "sha512": "jEkCfR2/M26OK/U4G7SEN063EU/F4LiVA06TtpZILMdX/quIHCg+wn31Zerl2LC+u1cyFancjTY3cNAr2/89PA==",
+      "type": "package",
+      "path": "nito.asyncex.tasks/5.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/Nito.AsyncEx.Tasks.dll",
+        "lib/net461/Nito.AsyncEx.Tasks.xml",
+        "lib/netstandard1.3/Nito.AsyncEx.Tasks.dll",
+        "lib/netstandard1.3/Nito.AsyncEx.Tasks.xml",
+        "lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "lib/netstandard2.0/Nito.AsyncEx.Tasks.xml",
+        "nito.asyncex.tasks.5.1.2.nupkg.sha512",
+        "nito.asyncex.tasks.nuspec"
+      ]
+    },
+    "Nito.Disposables/2.2.1": {
+      "sha512": "6sZ5uynQeAE9dPWBQGKebNmxbY4xsvcc5VplB5WkYEESUS7oy4AwnFp0FhqxTSKm/PaFrFqLrYr696CYN8cugg==",
+      "type": "package",
+      "path": "nito.disposables/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/Nito.Disposables.dll",
+        "lib/net461/Nito.Disposables.xml",
+        "lib/netstandard1.0/Nito.Disposables.dll",
+        "lib/netstandard1.0/Nito.Disposables.xml",
+        "lib/netstandard2.0/Nito.Disposables.dll",
+        "lib/netstandard2.0/Nito.Disposables.xml",
+        "lib/netstandard2.1/Nito.Disposables.dll",
+        "lib/netstandard2.1/Nito.Disposables.xml",
+        "nito.disposables.2.2.1.nupkg.sha512",
+        "nito.disposables.nuspec"
+      ]
+    },
+    "System.Collections.Immutable/1.7.1": {
+      "sha512": "B43Zsz5EfMwyEbnObwRxW5u85fzJma3lrDeGcSAV1qkhSRTNY5uXAByTn9h9ddNdhM+4/YoLc/CI43umjwIl9Q==",
+      "type": "package",
+      "path": "system.collections.immutable/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Collections.Immutable.dll",
+        "lib/net461/System.Collections.Immutable.xml",
+        "lib/netstandard1.0/System.Collections.Immutable.dll",
+        "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard1.3/System.Collections.Immutable.dll",
+        "lib/netstandard1.3/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
+        "system.collections.immutable.1.7.1.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
+    "DistributedLockingAbstrcation/1.0.0": {
+      "type": "project",
+      "path": "../DistributedLockingAbstrcation/DistributedLockingAbstrcation.csproj",
+      "msbuildProject": "../DistributedLockingAbstrcation/DistributedLockingAbstrcation.csproj"
+    },
+    "EventBus.Abstraction/1.0.0": {
+      "type": "project",
+      "path": "../EventBus.Abstraction/EventBus.Abstraction.csproj",
+      "msbuildProject": "../EventBus.Abstraction/EventBus.Abstraction.csproj"
+    },
+    "ObjectExtension/1.0.0": {
+      "type": "project",
+      "path": "../ObjectExtension/ObjectExtension.csproj",
+      "msbuildProject": "../ObjectExtension/ObjectExtension.csproj"
+    },
+    "Threading/1.0.0": {
+      "type": "project",
+      "path": "../Threading/Threading.csproj",
+      "msbuildProject": "../Threading/Threading.csproj"
+    },
+    "Uow/1.0.0": {
+      "type": "project",
+      "path": "../Uow/Uow.csproj",
+      "msbuildProject": "../Uow/Uow.csproj"
+    },
+    "Workers/1.0.0": {
+      "type": "project",
+      "path": "../Workers/Workers.csproj",
+      "msbuildProject": "../Workers/Workers.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "DistributedLockingAbstrcation >= 1.0.0",
+      "EventBus.Abstraction >= 1.0.0",
+      "ObjectExtension >= 1.0.0",
+      "Threading >= 1.0.0",
+      "Uow >= 1.0.0",
+      "Workers >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mehmet.benli\\.nuget\\packages\\": {},
@@ -40,7 +354,26 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\DistributedLockingAbstrcation\\DistributedLockingAbstrcation.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\DistributedLockingAbstrcation\\DistributedLockingAbstrcation.csproj"
+            },
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\EventBus.Abstraction\\EventBus.Abstraction.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\EventBus.Abstraction\\EventBus.Abstraction.csproj"
+            },
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\ObjectExtension\\ObjectExtension.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\ObjectExtension\\ObjectExtension.csproj"
+            },
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Threading\\Threading.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Threading\\Threading.csproj"
+            },
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Uow\\Uow.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Uow\\Uow.csproj"
+            },
+            "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Workers\\Workers.csproj": {
+              "projectPath": "C:\\Users\\mehmet.benli\\RiderProjects\\Voice_Server\\Workers\\Workers.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

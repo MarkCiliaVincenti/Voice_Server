@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Core.IO;
+﻿namespace Core.IO;
 
 /// <summary>
 /// A helper class for Directory operations.
@@ -39,7 +37,7 @@ public static class DirectoryHelper
         }
     }
 
-    public static bool IsSubDirectoryOf([NotNull] string parentDirectoryPath, [NotNull] string childDirectoryPath)
+    public static bool IsSubDirectoryOf(string parentDirectoryPath, string childDirectoryPath)
     {
         ArgumentNullException.ThrowIfNullOrEmpty(parentDirectoryPath);
         ArgumentNullException.ThrowIfNullOrEmpty(childDirectoryPath);
@@ -49,8 +47,8 @@ public static class DirectoryHelper
         );
     }
 
-    public static bool IsSubDirectoryOf([NotNull] DirectoryInfo parentDirectory,
-        [NotNull] DirectoryInfo childDirectory)
+    public static bool IsSubDirectoryOf(DirectoryInfo parentDirectory,
+        DirectoryInfo childDirectory)
     {
         ArgumentNullException.ThrowIfNull(parentDirectory);
         ArgumentNullException.ThrowIfNull(childDirectory);

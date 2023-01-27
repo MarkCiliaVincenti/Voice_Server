@@ -4,9 +4,9 @@ namespace Storage.BlobStoring;
 
 public class DefaultBlobContainerConfigurationProvider : IBlobContainerConfigurationProvider
 {
-    protected AbpBlobStoringOptions Options { get; }
+    protected BlobStoringOptions Options { get; }
 
-    public DefaultBlobContainerConfigurationProvider(IOptions<AbpBlobStoringOptions> options)
+    public DefaultBlobContainerConfigurationProvider(IOptions<BlobStoringOptions> options)
     {
         Options = options.Value;
     }
