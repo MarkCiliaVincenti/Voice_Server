@@ -1,6 +1,5 @@
 ﻿using Core;
 using JetBrains.Annotations;
-using ObjectExtension.ObjectExtending.Modularity;
 
 namespace ObjectExtension.ObjectExtending;
 
@@ -51,10 +50,6 @@ public class ObjectExtensionPropertyInfo : IBasicObjectExtensionPropertyInfo
     /// </summary>
     [CanBeNull]
     public Func<object> DefaultValueFactory { get; set; }
-
-    [NotNull]
-    public ExtensionPropertyLookupConfiguration Lookup { get; set; }
-
     public ObjectExtensionPropertyInfo(
         [NotNull] ObjectExtensionInfo objectExtension,
         [NotNull] Type type,
@@ -70,7 +65,6 @@ public class ObjectExtensionPropertyInfo : IBasicObjectExtensionPropertyInfo
 
         Attributes.AddRange(ExtensionPropertyHelper.GetDefaultAttributes(Type));
         DefaultValue = TypeHelper.GetDefaultValue(Type);
-        Lookup = new ExtensionPropertyLookupConfiguration();
     }
 
     public object GetDefaultValue()

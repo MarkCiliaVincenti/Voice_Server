@@ -1,9 +1,16 @@
 using Abstraction.Storage;
+using Core.ExceptionHandling;
+using EventBus;
+using EventBus.Distributed;
+using EventBus.RabbitMq.RabbitMq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using RabbitMq;
 using Shared.Utils.Logger;
 using Storage.BlobStoring;
 using Storage.FileSystem.FileSystem;
+using Threading;
+using Uow;
 
 namespace Infrastructure.Extensions;
 
@@ -45,5 +52,55 @@ public static class ServiceExtensions
                 });
             });
         });
+    }
+
+    public static void AddUnitOfWork(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddSingleton(typeof(IUnitOfWorkManager),
+            typeof(UnitOfWorkManager));
+        builder.Services.AddSingleton(typeof(IAmbientUnitOfWork),
+            typeof(AmbientUnitOfWork));
+    }
+
+    public static void AddExceptionHandler(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddTransient(typeof(IExceptionNotifier), typeof(ExceptionNotifier));
+    }
+
+
+    public static void AddDistributedEventBus(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddSingleton(typeof(IDistributedEventBus),
+            typeof(RabbitMqDistributedEventBus));
+        builder.Services.AddSingleton(typeof(IConnectionPool),
+            typeof(ConnectionPool));
+        builder.Services.AddSingleton(typeof(RabbitMqDistributedEventBus));
+        builder.Services.AddTransient(typeof(IRabbitMqSerializer),
+            typeof(Utf8JsonRabbitMqSerializer));
+        builder.Services.AddSingleton(typeof(IRabbitMqMessageConsumerFactory),
+            typeof(RabbitMqMessageConsumerFactory));
+        builder.Services.AddSingleton(typeof(IEventHandlerInvoker),
+            typeof(EventHandlerInvoker));
+
+
+        builder.Services.AddTransient(typeof(IRabbitMqMessageConsumer),
+            typeof(RabbitMqMessageConsumer));
+
+        builder.Services.AddTransient(typeof(RabbitMqMessageConsumer));
+        builder.Services.AddTransient(typeof(EqnAsyncTimer));
+
+
+        builder.Services.Configure<EqnRabbitMqOptions>(options =>
+        {
+            options.Connections.Default.UserName = "guest";
+            options.Connections.Default.Password = "guest";
+            options.Connections.Default.HostName = "localhost";
+            options.Connections.Default.Port = 5672;
+        });
+        builder.Services.Configure<EqnRabbitMqEventBusOptions>(builder.Configuration.GetSection("RabbitMQ:EventBus"));
+        var rabbitMqDistributedEventBus = builder.Services.BuildServiceProvider()
+            .GetRequiredService<RabbitMqDistributedEventBus>();
+
+        rabbitMqDistributedEventBus.Initialize();
     }
 }

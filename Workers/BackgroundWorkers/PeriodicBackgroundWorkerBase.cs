@@ -1,4 +1,3 @@
-using Core;
 using Core.ExceptionHandling;
 using Core.Threading;
 using Microsoft.Extensions.DependencyInjection;

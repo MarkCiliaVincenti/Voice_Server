@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Core;
 using Core.DynamicProxy;
 using ObjectExtension.Data;
 

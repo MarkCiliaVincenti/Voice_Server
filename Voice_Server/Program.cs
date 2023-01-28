@@ -17,7 +17,10 @@ public abstract class Program
         builder.AddSignalr();
         builder.Services.AddSwaggerGen();
         builder.AddCustomSerilog();
+        builder.AddExceptionHandler();
         builder.AddBlobStorage();
+        builder.AddUnitOfWork();
+        builder.AddDistributedEventBus();
 
 
         builder.Services.AddTransient<IRealTimeNotifier, SignalRRealTimeNotifier>();

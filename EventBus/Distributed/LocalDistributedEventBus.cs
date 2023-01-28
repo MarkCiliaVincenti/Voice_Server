@@ -1,5 +1,4 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using Core.Collections;
 using EventBus.Abstraction.EventBus;
 using EventBus.Abstraction.EventBus.Distributed;
